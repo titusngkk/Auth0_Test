@@ -11,5 +11,13 @@
         <%-include('partials/nav.ejs') %>
         <h1><%= title %></h1>
         <p>Welcome to <%= title %></p>
+        <% if(user) { %>
+            <div class="profileInfo">
+                <img src="<%= user.picture %>" />
+                <p class="name">
+                    <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %>
+                </p>
+            </div>
+        <% } %>
     </body>
 </html>
