@@ -5,15 +5,15 @@ const { requiresAuth } = require('express-openid-connect')
 router.get("/", (req, res) => {
     console.log(req.oidc.isAuthenticated());
     res.render("index", { 
-    title: "Express Demo", 
+    title: "iGoInvest", 
     isAuthenticated: req.oidc.isAuthenticated(),
     user: req.oidc.user,
  });
 });
 
-router.get("/secured", requiresAuth(), (req, res) => {
-    res.render("secured", { 
-    title: "Secure Page", 
+router.get("/dashboard", requiresAuth(), (req, res) => {
+    res.render("dashboard", { 
+    title: "Dashboard", 
     isAuthenticated: req.oidc.isAuthenticated(),
     user: req.oidc.user,
  });
