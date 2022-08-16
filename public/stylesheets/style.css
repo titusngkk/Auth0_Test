@@ -5,11 +5,22 @@ body {
   font-family: 'Lato', sans-serif;
   padding: 1em;
   line-height: 1.5;
+  text-align: center;
+
+  background-image:url('https://i.postimg.cc/vBFw98zV/technical-Analysis.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.logo {
+  margin-top: 20px ;
+  width: 85px;
 }
 
 .profileInfo {
+    background: #fdfdfd;
     width: 200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 0.5em;
     border: 1px solid #888;
     border-radius: 5px;
@@ -28,11 +39,13 @@ body {
 
 .flex {
   background: #fdfdfd;
+  width: 500px;
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
   align-items:center;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 0.5em;
   border-radius:5px;
 }
 .element-center {

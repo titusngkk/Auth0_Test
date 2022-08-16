@@ -9,9 +9,11 @@
 </head>
     <body>
         <%-include('partials/nav.ejs') %>
+        <img class="logo" src="https://i.postimg.cc/ZRqBsRj9/robot-icons.png">
         <h1><%= title %></h1>
         <p>Welcome to <%= title %></p>
         <% if(user) { %>
+            
             <div class="profileInfo">
                 <img src="<%= user.picture %>" />
                 <p class="name">
