@@ -4,11 +4,15 @@ const { requiresAuth } = require('express-openid-connect')
 
 router.get("/", (req, res) => {
     console.log(req.oidc.isAuthenticated());
+    if (req.oidc.isAuthenticated()) {
+        res.redirect("/dashboard");
+    } else {
     res.render("index", { 
     title: "iGoInvest", 
     isAuthenticated: req.oidc.isAuthenticated(),
     user: req.oidc.user,
  });
+}
 });
 
 router.get("/dashboard", requiresAuth(), (req, res) => {
